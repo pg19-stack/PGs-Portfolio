@@ -10,12 +10,12 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 
 ## What's Inside
 
-- **Featured Insights** - Four case studies at a glance
-- **Capabilities** - Three pillars, how I work, and the toolkit I bring on day one
-- **Impact** - Full case studies with public references, plus the 90-Day Impact Plan
-- **About** - Experience highlights and awards
+- **Featured Insights** - Five case studies at a glance, with photography
+- **Capabilities** - Four pillars, how I work, and the toolkit I bring on day one
+- **Impact** - Full case studies in a click-through viewer, plus the 90-Day Impact Plan
+- **About** - Career timeline, experience highlights, awards and education
 
-The previous design is kept in [`v1/`](v1/). See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist.
+The original design is kept in [`v1/`](v1/). See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist and photo credits.
 
 ## Built With
 
