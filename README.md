@@ -10,7 +10,7 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 
 ## What's Inside
 
-- **Featured Insights** - Six case studies at a glance, with photography
+- **Featured Insights** - Five case studies at a glance, with photography
 - **Capabilities** - Four pillars, how I work, and the toolkit I bring on day one
 - **Impact** - Full case studies in a click-through viewer, plus the 90-Day Impact Plan
 - **About** - Career timeline, experience highlights, awards and education

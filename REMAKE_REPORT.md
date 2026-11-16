@@ -12,7 +12,7 @@ Pulkit Garg's own.
   case studies, and a photo banner on each case.
 - Case studies now open in a click-through viewer instead of one long scroll.
 - Career content updated: current title, strategy lead and people manager positioning, career
-  timeline, education, and two new case studies (2030 strategy, cost curve).
+  timeline, education, and one new case study (2030 strategy).
 - The four earlier case studies are kept and extended with more detail.
 
 ## Checklist
@@ -26,8 +26,8 @@ Pulkit Garg's own.
 | 5 | No sideways scrolling at 1440px, 820px and 390px widths | Pass |
 | 6 | Case viewer opens the right case from cards and tabs at all three widths | Pass |
 | 7 | Mobile menu opens at 820px and 390px | Pass |
-| 8 | Works without JavaScript (all six cases shown in full) | Pass |
-| 9 | Privacy rules: no function headcount, cost base figure, adviser firm names, team size, salary or notice period | Pass |
+| 8 | Works without JavaScript (all five cases shown in full) | Pass |
+| 9 | Privacy rules: no exact function headcount, cost programme detail, cost base figure, adviser firm names, team size, salary or notice period | Pass |
 
 ## Intentional content changes
 
@@ -35,7 +35,8 @@ Pulkit Garg's own.
 - Opening numbers changed to: 6 years at RBC, $1BN AI value target, 4x promoted, Top 1%.
 - "10+ thought leadership publications" now reads "25+", matching the resume.
 - "Three pillars" is now "Four pillars" (Enterprise Strategy & Transformation added).
-- Case studies renumbered 1 to 6.
+- Case studies renumbered 1 to 5.
+- Third pass: case cards lead with one result and a reading time; focus areas are clickable.
 
 ## Photo credits
 

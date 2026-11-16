@@ -184,6 +184,9 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .read-more span { display: inline-block; transition: transform .2s; }
 .insight:hover .read-more span { transform: translateX(5px); }
 
+/* Bottom row: two wide cards */
+.insights-grid > .insight:not(.insight-lead):not(.insight-tall) { grid-column: span 3; }
+
 /* Photo-overlay cards (lead + two tall) */
 .insight-lead, .insight-tall { overflow: hidden; background: var(--navy); color: #fff; justify-content: flex-end; isolation: isolate; }
 .insight-lead { grid-column: span 4; grid-row: span 2; min-height: 640px; }
@@ -389,7 +392,7 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
     .section { padding: 76px 0; }
     .statement { padding: 76px 0; }
     .insights-grid { grid-template-columns: repeat(2, 1fr); }
-    .insight, .insight-tall { grid-column: span 1; }
+    .insight, .insight-tall, .insights-grid > .insight:not(.insight-lead):not(.insight-tall) { grid-column: span 1; }
     .insight-lead { grid-column: 1 / -1; grid-row: auto; min-height: 460px; }
     .pillars { grid-template-columns: 1fr 1fr; }
     .pillar:nth-child(3) { border-left: 0; }
