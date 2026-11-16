@@ -15,7 +15,7 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 - **90-Day Impact Plan** - How I deliver value in the first 90 days
 - **About** - Career timeline, experience highlights, awards and education
 
-The original design is kept in [`v1/`](v1/). See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist and photo credits.
+See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist and photo credits.
 
 ## Built With
 
