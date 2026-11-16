@@ -178,12 +178,14 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .insight-lead, .insight-tall { overflow: hidden; background: var(--navy); color: #fff; justify-content: flex-end; isolation: isolate; }
 .insight-lead { grid-column: span 4; grid-row: span 2; min-height: 640px; }
 .insight-tall { grid-column: span 2; min-height: 308px; }
+.insight-wide { grid-column: span 3; min-height: 340px; }
 .insight-lead > img, .insight-tall > img { position: absolute; inset: 0; z-index: -2; }
 .insight-lead::after, .insight-tall::after {
     content: ''; position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(0deg, rgba(4,16,34,.94) 0%, rgba(4,16,34,.55) 45%, rgba(4,16,34,.05) 100%);
 }
 .insight-tall::after { background: linear-gradient(0deg, rgba(4,16,34,.96) 0%, rgba(4,16,34,.84) 65%, rgba(4,16,34,.4) 100%); }
+.insight-wide::after { background: linear-gradient(0deg, rgba(4,16,34,.95) 0%, rgba(4,16,34,.72) 50%, rgba(4,16,34,.2) 100%); }
 .insight-lead .insight-body, .insight-tall .insight-body { padding: 28px; }
 .insight-lead .insight-body { padding: 40px; max-width: 640px; }
 .insight-lead h3, .insight-tall h3, .insight-lead:hover h3, .insight-tall:hover h3 { color: #fff; }
@@ -370,6 +372,7 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
     .insights-grid { grid-template-columns: repeat(2, 1fr); }
     .insight, .insight-tall, .insights-grid > .insight:not(.insight-lead):not(.insight-tall) { grid-column: span 1; }
     .insight-lead { grid-column: 1 / -1; grid-row: auto; min-height: 460px; }
+    .insight-wide { min-height: 308px; }
     .pillars { grid-template-columns: 1fr 1fr; }
     .pillar:nth-child(3) { border-left: 0; }
     .pillar:nth-child(n+3) { border-top: 1px solid var(--line); }
