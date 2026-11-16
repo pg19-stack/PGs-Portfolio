@@ -45,7 +45,7 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .skip-link:focus { top: 12px; }
 
 /* Shared type bits */
-.eyebrow, .kicker, .label, .topics-label, .plan-days, .mini-tag, .tl-date {
+.eyebrow, .kicker, .label, .plan-days, .mini-tag, .tl-date {
     font-family: var(--sans);
     font-size: 0.75rem;
     font-weight: 600;
@@ -145,19 +145,6 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .stat dt { font-family: var(--serif); font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; }
 .stat dd { color: rgba(255,255,255,.78); font-size: 0.88rem; margin-top: 6px; max-width: 24ch; }
 
-/* Topic bar: clickable focus areas */
-.topics { border-bottom: 1px solid var(--line); }
-.topics-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; padding-top: 22px; padding-bottom: 22px; }
-.topics-label { color: var(--muted); }
-.topics ul { display: flex; flex-wrap: wrap; gap: 10px; }
-.topics li a {
-    display: inline-block; padding: 9px 18px;
-    border: 1px solid #c3cad6; border-radius: 999px;
-    font-weight: 500; color: var(--ink); font-size: 0.92rem;
-    transition: background-color .2s, color .2s, border-color .2s;
-}
-.topics li a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
-
 /* ============================================
    Sections
    ============================================ */
@@ -250,43 +237,32 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .toolkit h4 { font-size: 1.08rem; margin-bottom: 4px; }
 
 /* ============================================
-   Cases (tabbed viewer)
+   Cases (open in place under the cards)
    ============================================ */
-.case-tabs { display: none; }
-.js .case-tabs {
-    display: flex; gap: 0; margin-bottom: 32px;
-    border-bottom: 1px solid var(--line);
-    overflow-x: auto; scrollbar-width: none;
-    position: sticky; top: var(--header-h); z-index: 20; background: var(--paper);
-}
-.js .case-tabs::-webkit-scrollbar { display: none; }
-.case-tabs a {
-    flex: 0 0 auto; display: flex; align-items: baseline; gap: 10px;
-    padding: 18px 22px 16px; margin-bottom: -1px;
-    font-weight: 500; font-size: 0.95rem; color: var(--muted);
-    border-bottom: 3px solid transparent; white-space: nowrap;
-    transition: color .2s, border-color .2s;
-}
-.case-tabs a:first-child { padding-left: 0; }
-.case-tabs a .num { font-size: 0.9rem; color: inherit; opacity: .7; }
-.case-tabs a:hover { color: var(--ink); }
-.case-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
-
-.case { margin-bottom: 72px; }
-.case:last-of-type { margin-bottom: 0; }
-.js .case { display: none; margin-bottom: 0; }
+.case { margin-top: 72px; border-top: 3px solid var(--navy); scroll-margin-top: calc(var(--header-h) + 16px); }
+.js .case { display: none; margin-top: 56px; }
 .js .case.active { display: block; animation: caseIn .45s ease both; }
 @keyframes caseIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
-.case-banner { position: relative; isolation: isolate; overflow: hidden; background: var(--navy); min-height: 340px; display: flex; align-items: flex-end; }
-.case-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-.case-banner::after {
-    content: ''; position: absolute; inset: 0; z-index: -1;
-    background: linear-gradient(90deg, rgba(4,16,34,.93) 0%, rgba(4,16,34,.62) 55%, rgba(4,16,34,.2) 100%);
+.case-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding-top: 32px; }
+.case-top .kicker { color: var(--accent); }
+.case-top h3 { font-size: clamp(1.9rem, 3.8vw, 3rem); line-height: 1.08; max-width: 18em; }
+.case-close {
+    display: none; flex-shrink: 0; align-items: center; gap: 8px;
+    font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--ink);
+    background: none; border: 1px solid #c3cad6; padding: 10px 16px; cursor: pointer;
+    transition: background-color .2s, color .2s, border-color .2s;
 }
-.case-banner-text { padding: 44px 48px; max-width: 760px; }
-.case-banner .kicker { color: var(--cyan); }
-.case-banner h3 { color: #fff; font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.08; }
+.js .case-close { display: inline-flex; }
+.case-close span { font-size: 1.2rem; line-height: 1; }
+.case-close:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.case-next { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; }
+.case-next a { font-weight: 600; color: var(--accent); }
+.case-next a span { display: inline-block; transition: transform .2s; }
+.case-next a:hover span { transform: translateX(5px); }
+
+/* the open card is marked */
+.insight.is-open { outline: 3px solid var(--accent); outline-offset: 4px; }
 
 .case-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; padding-top: 48px; }
 .case-lede { font-family: var(--serif); font-size: 1.3rem; line-height: 1.4; color: var(--ink); }
@@ -429,10 +405,9 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
     .approach-item + .approach-item { border-top: 1px solid var(--line); }
     .toolkit li:nth-child(2) { border-top: 1px solid #cfd5de; padding-top: 20px; }
     .exp:nth-child(2) { border-top: 1px solid var(--line); }
-    .case-banner { min-height: 280px; }
-    .case-banner-text { padding: 28px 24px; }
     .case-side .metrics { grid-template-columns: 1fr; }
-    .case-tabs a { padding: 16px 16px 14px; }
+    .case-top { flex-direction: column-reverse; gap: 16px; }
+    .case-close { align-self: flex-end; }
     .timeline li { grid-template-columns: 1fr; gap: 6px; }
     .refs .ref { flex-direction: column; gap: 4px; }
     .built { padding: 28px 20px; }

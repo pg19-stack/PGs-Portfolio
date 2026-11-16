@@ -10,7 +10,7 @@ Pulkit Garg's own.
 
 - Real photography replaces the line drawings: a full-screen opening image, photo cards for the
   case studies, and a photo banner on each case.
-- Case studies now open in a click-through viewer instead of one long scroll.
+- Case studies appear once, as photo cards; clicking a card opens the full case directly underneath.
 - Career content updated: current title, strategy lead and people manager positioning, career
   timeline, education, and one new case study (2030 strategy).
 - The four earlier case studies are kept and extended with more detail.
@@ -24,7 +24,7 @@ Pulkit Garg's own.
 | 3 | Every in-page link points to a section that exists | Pass |
 | 4 | All photos load; no browser errors | Pass |
 | 5 | No sideways scrolling at 1440px, 820px and 390px widths | Pass |
-| 6 | Case viewer opens the right case from cards and tabs at all three widths | Pass |
+| 6 | Each card opens the right case in place, and Close and Next work, at all three widths | Pass |
 | 7 | Mobile menu opens at 820px and 390px | Pass |
 | 8 | Works without JavaScript (all five cases shown in full) | Pass |
 | 9 | Privacy rules: no exact function headcount, cost programme detail, cost base figure, adviser firm names, team size, salary or notice period | Pass |

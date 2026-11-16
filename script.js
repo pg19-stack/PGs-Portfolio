@@ -43,41 +43,49 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => el.classList.add('visible'));
     }
 
-    // --- Case study viewer ---
+    // --- Case studies open in place under the cards ---
     const cases = Array.from(document.querySelectorAll('.case'));
-    const tabs = Array.from(document.querySelectorAll('.case-tabs a'));
-    const tabBar = document.getElementById('case-tabs');
+    const cards = Array.from(document.querySelectorAll('.insight[data-case]'));
+    const scrollToEl = (el) => {
+        const y = window.scrollY + el.getBoundingClientRect().top - header.offsetHeight - 30;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    };
+    const setHash = (id) => {
+        try {
+            if (history.replaceState) history.replaceState(null, '', id ? '#' + id : location.pathname + location.search);
+        } catch (e) { /* not available in every viewer */ }
+    };
     const showCase = (id) => {
-        if (!cases.some(c => c.id === id)) return false;
-        cases.forEach(c => c.classList.toggle('active', c.id === id));
-        tabs.forEach(t => {
-            const on = t.dataset.case === id;
-            t.classList.toggle('active', on);
-            t.setAttribute('aria-selected', String(on));
-            if (on && tabBar) {
-                const left = t.offsetLeft - (tabBar.clientWidth - t.offsetWidth) / 2;
-                tabBar.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
-            }
+        const target = cases.find(c => c.id === id);
+        if (!target) return null;
+        cases.forEach(c => c.classList.toggle('active', c === target));
+        cards.forEach(card => {
+            const on = card.dataset.case === id;
+            card.classList.toggle('is-open', on);
+            card.setAttribute('aria-expanded', String(on));
         });
-        return true;
+        return target;
+    };
+    const closeCases = () => {
+        const openCard = cards.find(card => card.classList.contains('is-open'));
+        cases.forEach(c => c.classList.remove('active'));
+        cards.forEach(card => { card.classList.remove('is-open'); card.setAttribute('aria-expanded', 'false'); });
+        setHash('');
+        if (openCard) scrollToEl(openCard);
     };
     document.querySelectorAll('a[data-case]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const id = link.dataset.case;
-            showCase(id);
-            if (history.replaceState) history.replaceState(null, '', '#' + id);
-            // Cards jump down to the viewer; tabs only move the page if the viewer top is off screen
-            const fromTab = link.closest('.case-tabs');
-            const top = tabBar.getBoundingClientRect().top;
-            if (!fromTab || top < 0 || top > window.innerHeight * 0.5) {
-                const y = window.scrollY + top - header.offsetHeight + 1;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }
+            const target = showCase(link.dataset.case);
+            if (!target) return;
+            setHash(target.id);
+            scrollToEl(target);
         });
     });
-    const initial = (location.hash || '').slice(1);
-    if (!showCase(initial)) showCase('case-1');
+    document.querySelectorAll('.case-close').forEach(btn => btn.addEventListener('click', closeCases));
+    cards.forEach(card => card.setAttribute('aria-expanded', 'false'));
+    const initial = showCase((location.hash || '').slice(1));
+    if (initial) setTimeout(() => scrollToEl(initial), 150);
 
     // --- Active nav link highlighting ---
     const navLinks = nav ? Array.from(nav.querySelectorAll('a[href^="#"]')) : [];
