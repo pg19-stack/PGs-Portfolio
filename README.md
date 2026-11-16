@@ -11,6 +11,8 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 ## What's Inside
 
 - **Case Studies** - Five photo cards; each opens the full case study in place
+- **Insights** - Five research work samples (PDF) and how they were made
+- **AI Use-Case Prioritizer** - An interactive tool on its own page (`prioritizer.html`)
 - **Capabilities** - Four pillars, how I work, and the toolkit I bring on day one
 - **90-Day Impact Plan** - How I deliver value in the first 90 days
 - **About** - Career timeline, experience highlights, awards and education

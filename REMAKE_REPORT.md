@@ -38,6 +38,13 @@ Pulkit Garg's own.
 - Case studies renumbered 1 to 5.
 - Third pass: case cards lead with one result and a reading time; focus areas are clickable.
 
+## Fourth pass: insights and an interactive tool
+
+- **Insights section:** five research work samples (PDF) with cover images, published as supplied by the owner.
+- **How I use AI for strategy work:** the five-step method the reports describe.
+- **AI Use-Case Prioritizer:** a separate page () that scores AI ideas and sorts them into three lanes.
+- Not checked: the figures inside the five reports were not verified against their sources.
+
 ## Photo credits
 
 All photographs are from Unsplash, used under the Unsplash License (free to use, no attribution
