@@ -10,9 +10,9 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 
 ## What's Inside
 
-- **Featured Insights** - Five case studies at a glance, with photography
+- **Case Studies** - Five photo cards; each opens the full case study in place
 - **Capabilities** - Four pillars, how I work, and the toolkit I bring on day one
-- **Impact** - Full case studies in a click-through viewer, plus the 90-Day Impact Plan
+- **90-Day Impact Plan** - How I deliver value in the first 90 days
 - **About** - Career timeline, experience highlights, awards and education
 
 The original design is kept in [`v1/`](v1/). See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist and photo credits.
