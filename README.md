@@ -10,11 +10,12 @@ Visit: [pg19-stack.github.io/PGs-Portfolio](https://pg19-stack.github.io/PGs-Por
 
 ## What's Inside
 
-- **Thesis** - How I help enterprises turn ambitions into measurable execution
-- **Three Pillars** - AI-to-Value Strategy, Board/Committee Narrative, Culture + Skills Enablement
-- **Case Studies** - Real examples of enterprise-scale impact
-- **Toolkit** - Frameworks and tools I bring on day one
-- **90-Day Impact Plan** - How I deliver value in the first 90 days
+- **Featured Insights** - Four case studies at a glance
+- **Capabilities** - Three pillars, how I work, and the toolkit I bring on day one
+- **Impact** - Full case studies with public references, plus the 90-Day Impact Plan
+- **About** - Experience highlights and awards
+
+The previous design is kept in [`v1/`](v1/). See [`REMAKE_REPORT.md`](REMAKE_REPORT.md) for the redesign checklist.
 
 ## Built With
 

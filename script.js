@@ -4,109 +4,51 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Navbar scroll effect ---
-    const nav = document.getElementById('nav');
-    const handleScroll = () => {
-        nav.classList.toggle('scrolled', window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
     // --- Mobile menu toggle ---
     const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    if (toggle && navLinks) {
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            toggle.classList.toggle('active');
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                toggle.classList.remove('active');
-            });
-        });
+    const nav = document.getElementById('site-nav');
+    const setMenu = (open) => {
+        nav.classList.toggle('open', open);
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    };
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
     }
 
     // --- Scroll reveal ---
     const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // --- Counter animation ---
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    statNumbers.forEach(el => counterObserver.observe(el));
-
-    function animateCounter(el) {
-        const target = parseInt(el.dataset.target);
-        const prefix = el.dataset.prefix || '';
-        const suffix = el.dataset.suffix || '';
-        const duration = 1500;
-        const start = performance.now();
-
-        function update(now) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = Math.round(eased * target);
-            el.textContent = prefix + current + (suffix ? suffix : '');
-            if (progress < 1) requestAnimationFrame(update);
-        }
-        requestAnimationFrame(update);
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add('visible'));
     }
 
-    // --- Smooth scroll for anchor links ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
     // --- Active nav link highlighting ---
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-    const activeLinkObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.id;
-                navLinksAll.forEach(link => {
-                    link.style.color = link.getAttribute('href') === '#' + id
-                        ? 'var(--text-primary)'
-                        : '';
-                });
-            }
+    const navLinks = nav ? Array.from(nav.querySelectorAll('a[href^="#"]')) : [];
+    const sections = navLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+    const updateActive = () => {
+        const line = window.scrollY + window.innerHeight * 0.35;
+        let current = null;
+        sections.forEach(section => {
+            if (section.offsetTop <= line) current = section;
         });
-    }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
-    sections.forEach(section => activeLinkObserver.observe(section));
-
-    // --- Phase bar animation ---
-    const phaseBars = document.querySelectorAll('.phase-bar');
-    const phaseObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-                phaseObserver.unobserve(entry.target);
-            }
+        navLinks.forEach(link => {
+            link.classList.toggle('active', !!current && link.getAttribute('href') === '#' + current.id);
         });
-    }, { threshold: 0.5 });
-    phaseBars.forEach(bar => phaseObserver.observe(bar));
+    };
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
 });
