@@ -27,12 +27,12 @@ Pulkit Garg's own.
 | 6 | Case viewer opens the right case from cards and tabs at all three widths | Pass |
 | 7 | Mobile menu opens at 820px and 390px | Pass |
 | 8 | Works without JavaScript (all six cases shown in full) | Pass |
-| 9 | Privacy rules: no cost base figure, adviser firm names, team size, salary or notice period | Pass |
+| 9 | Privacy rules: no function headcount, cost base figure, adviser firm names, team size, salary or notice period | Pass |
 
 ## Intentional content changes
 
 - Title is now "Senior Manager, Strategy & Initiatives, Transformation & Chief Operating Office".
-- Opening numbers changed to: 22K+ technologists, $1BN AI value target, 4x promoted, Top 1%.
+- Opening numbers changed to: 6 years at RBC, $1BN AI value target, 4x promoted, Top 1%.
 - "10+ thought leadership publications" now reads "25+", matching the resume.
 - "Three pillars" is now "Four pillars" (Enterprise Strategy & Transformation added).
 - Case studies renumbered 1 to 6.
