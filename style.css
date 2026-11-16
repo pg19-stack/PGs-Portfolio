@@ -145,12 +145,18 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .stat dt { font-family: var(--serif); font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; }
 .stat dd { color: rgba(255,255,255,.78); font-size: 0.88rem; margin-top: 6px; max-width: 24ch; }
 
-/* Topic bar */
+/* Topic bar: clickable focus areas */
 .topics { border-bottom: 1px solid var(--line); }
-.topics-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; padding-top: 20px; padding-bottom: 20px; }
+.topics-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; padding-top: 22px; padding-bottom: 22px; }
 .topics-label { color: var(--muted); }
-.topics ul { display: flex; flex-wrap: wrap; gap: 8px 28px; }
-.topics li { font-weight: 500; color: var(--ink); font-size: 0.95rem; }
+.topics ul { display: flex; flex-wrap: wrap; gap: 10px; }
+.topics li a {
+    display: inline-block; padding: 9px 18px;
+    border: 1px solid #c3cad6; border-radius: 999px;
+    font-weight: 500; color: var(--ink); font-size: 0.92rem;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+.topics li a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
 
 /* ============================================
    Sections
@@ -180,14 +186,14 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 
 /* Photo-overlay cards (lead + two tall) */
 .insight-lead, .insight-tall { overflow: hidden; background: var(--navy); color: #fff; justify-content: flex-end; isolation: isolate; }
-.insight-lead { grid-column: span 4; grid-row: span 2; min-height: 560px; }
-.insight-tall { grid-column: span 2; min-height: 268px; }
+.insight-lead { grid-column: span 4; grid-row: span 2; min-height: 640px; }
+.insight-tall { grid-column: span 2; min-height: 308px; }
 .insight-lead > img, .insight-tall > img { position: absolute; inset: 0; z-index: -2; }
 .insight-lead::after, .insight-tall::after {
     content: ''; position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(0deg, rgba(4,16,34,.94) 0%, rgba(4,16,34,.55) 45%, rgba(4,16,34,.05) 100%);
 }
-.insight-tall::after { background: linear-gradient(0deg, rgba(4,16,34,.96) 0%, rgba(4,16,34,.78) 55%, rgba(4,16,34,.15) 100%); }
+.insight-tall::after { background: linear-gradient(0deg, rgba(4,16,34,.96) 0%, rgba(4,16,34,.84) 65%, rgba(4,16,34,.4) 100%); }
 .insight-lead .insight-body, .insight-tall .insight-body { padding: 28px; }
 .insight-lead .insight-body { padding: 40px; max-width: 640px; }
 .insight-lead h3, .insight-tall h3, .insight-lead:hover h3, .insight-tall:hover h3 { color: #fff; }
@@ -195,6 +201,22 @@ h4 { font-family: var(--sans); color: var(--ink); font-weight: 600; font-size: 1
 .insight-lead p:not(.kicker) { font-size: 1.08rem; color: rgba(255,255,255,.85); margin-bottom: 20px; }
 .insight-lead .kicker, .insight-tall .kicker { color: var(--cyan); }
 .insight-lead .read-more, .insight-tall .read-more { color: #fff; }
+
+/* Number-first cards + type and reading time */
+.impact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 12px; }
+.impact strong { font-family: var(--serif); font-weight: 500; font-size: clamp(2.1rem, 3.2vw, 2.9rem); line-height: 1; color: var(--navy); letter-spacing: -0.02em; }
+.impact span { font-size: 0.92rem; font-weight: 500; color: var(--muted); }
+.insight-lead .impact strong, .insight-tall .impact strong { color: #fff; }
+.insight-lead .impact span, .insight-tall .impact span { color: rgba(255,255,255,.82); }
+.insight-lead .impact strong { font-size: clamp(3rem, 5.4vw, 4.6rem); }
+.insight-lead .impact { margin-bottom: 18px; }
+.card-meta { display: flex; gap: 10px; font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; }
+.card-meta span:first-child { font-weight: 600; color: var(--ink); }
+.card-meta span + span { padding-left: 10px; border-left: 1px solid currentColor; }
+.insight-lead .card-meta, .insight-tall .card-meta { color: rgba(255,255,255,.75); }
+.insight-lead .card-meta span:first-child, .insight-tall .card-meta span:first-child { color: #fff; }
+.insight:not(.insight-lead):not(.insight-tall) h3 { font-size: 1.3rem; }
+.insight-tall h3 { font-size: 1.25rem; margin-bottom: 10px; }
 
 /* Statement */
 .statement { background: var(--paper); padding: 104px 0 96px; border-top: 1px solid var(--line); }
