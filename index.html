@@ -7,176 +7,291 @@
     <meta name="description" content="Pulkit Garg - Senior Manager, Strategy & Enablement. AI Value Creation, Enterprise Strategy, Board-Ready Storytelling.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>PG</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b1f3a'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='white' text-anchor='middle'>PG</text></svg>">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#hero" class="nav-logo">PG</a>
-            <div class="nav-links">
-                <a href="#thesis">Thesis</a>
-                <a href="#pillars">Expertise</a>
-                <a href="#case-studies">Case Studies</a>
-                <a href="#toolkit">Toolkit</a>
-                <a href="#impact">90-Day Plan</a>
-                <a href="#connect">Connect</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#top" class="wordmark" aria-label="Pulkit Garg, home">
+                <span>Pulkit</span>
+                <span>Garg</span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Primary">
+                <a href="#insights">Featured Insights</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#impact">Impact</a>
+                <a href="#about">About</a>
+                <a href="#connect" class="nav-cta">Connect</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
                 <span></span><span></span><span></span>
             </button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main">
 
     <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-label animate-in">Strategy & Transformation</p>
-                    <h1 class="hero-title animate-in delay-1">Pulkit Garg</h1>
-                    <p class="hero-subtitle animate-in delay-2">Senior Manager, Strategy & Enablement</p>
-                    <div class="hero-tags animate-in delay-3">
-                        <span class="tag">AI Value Creation</span>
-                        <span class="tag">Enterprise Strategy</span>
-                        <span class="tag">Board-Ready Storytelling</span>
-                    </div>
-                    <div class="hero-cta animate-in delay-4">
-                        <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
-                        <a href="#connect" class="btn btn-outline">Get in Touch</a>
-                    </div>
-                </div>
-                <div class="hero-visual animate-in delay-2">
-                    <div class="hero-photo-wrapper">
-                        <img src="photo.jpg" alt="Pulkit Garg" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="hero-photo-fallback">PG</div>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-                            <span class="stat-label">Years Enterprise Strategy</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="1" data-prefix="$" data-suffix="BN">0</span>
-                            <span class="stat-label">AI Value Target Shaped</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
-                            <span class="stat-label">Thought Leadership Papers</span>
-                        </div>
-                    </div>
+    <section class="hero">
+        <svg class="hero-art" viewBox="0 0 1200 700" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="1000" cy="350" r="120"/><circle cx="1000" cy="350" r="220"/>
+                <circle cx="1000" cy="350" r="330"/><circle cx="1000" cy="350" r="450"/>
+                <circle cx="1000" cy="350" r="580"/><circle cx="1000" cy="350" r="720"/>
+            </g>
+        </svg>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow eyebrow-light">Strategy & Transformation</p>
+                <h1>I help enterprises turn <em>multi-year ambitions</em> into <em>measurable execution.</em></h1>
+                <p class="hero-byline"><strong>Pulkit Garg</strong> &middot; Senior Manager, Strategy & Enablement</p>
+                <div class="hero-cta">
+                    <a href="#insights" class="btn btn-light">View Case Studies <span aria-hidden="true">&rarr;</span></a>
+                    <a href="#connect" class="btn btn-ghost">Get in Touch</a>
                 </div>
             </div>
+            <figure class="hero-photo">
+                <img src="photo.jpg" alt="Pulkit Garg" width="600" height="600" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-photo-fallback">PG</div>
+            </figure>
         </div>
-        <div class="scroll-indicator animate-in delay-5">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+        <div class="container">
+            <dl class="stats">
+                <div class="stat">
+                    <dt>5+</dt>
+                    <dd>Years Enterprise Strategy</dd>
+                </div>
+                <div class="stat">
+                    <dt>$1BN</dt>
+                    <dd>AI Value Target Shaped</dd>
+                </div>
+                <div class="stat">
+                    <dt>10+</dt>
+                    <dd>Thought Leadership Papers</dd>
+                </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Thesis -->
-    <section class="section section-thesis" id="thesis">
+    <!-- Topic bar -->
+    <div class="topics">
+        <div class="container topics-inner">
+            <span class="topics-label">Focus areas</span>
+            <ul>
+                <li>AI Value Creation</li>
+                <li>Enterprise Strategy</li>
+                <li>Board-Ready Storytelling</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Featured Insights -->
+    <section class="section" id="insights">
         <div class="container">
-            <div class="thesis-content">
-                <p class="section-label">My Thesis</p>
-                <h2 class="thesis-statement">I help enterprises turn <span class="text-accent">multi-year ambitions</span> into <span class="text-accent">measurable execution.</span></h2>
-                <div class="thesis-pillars">
-                    <div class="thesis-pillar reveal">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>
-                        </div>
-                        <h3>Portfolio + Operating Model</h3>
-                        <p>Translate top-down targets into a structured portfolio and operating model</p>
+            <div class="section-head">
+                <p class="eyebrow">Featured Insights</p>
+                <h2>Proven impact at enterprise scale</h2>
+            </div>
+            <div class="insights-grid">
+                <a href="#case-1" class="insight insight-lead reveal">
+                    <div class="insight-art art-1" aria-hidden="true">
+                        <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M0 300 C150 300 180 220 300 200 S470 90 600 60"/>
+                                <path d="M0 330 C150 330 200 270 300 250 S480 160 600 130" opacity=".6"/>
+                                <path d="M0 360 C160 360 220 320 300 300 S500 230 600 200" opacity=".35"/>
+                            </g>
+                            <g fill="currentColor"><circle cx="300" cy="200" r="6"/><circle cx="452" cy="118" r="6"/><circle cx="600" cy="60" r="8"/></g>
+                        </svg>
                     </div>
-                    <div class="thesis-pillar reveal">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <h3>Senior Narratives</h3>
-                        <p>Build executive narratives that stand up in governance and board settings</p>
+                    <div class="insight-body">
+                        <p class="kicker">Case Study 1 &middot; AI strategy</p>
+                        <h3>Designing an AI-to-Value Engine That Scales</h3>
+                        <p>AI ambition is easy; scaling adoption + value capture is hard.</p>
+                        <span class="read-more">Read the case <span aria-hidden="true">&rarr;</span></span>
                     </div>
-                    <div class="thesis-pillar reveal">
-                        <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <h3>Measurable Change Plans</h3>
-                        <p>Drive adoption through simple, measurable change and enablement plans</p>
+                </a>
+                <a href="#case-2" class="insight reveal">
+                    <div class="insight-art art-2" aria-hidden="true">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="60" y="40" width="120" height="140"/><rect x="100" y="70" width="120" height="140" opacity=".6"/>
+                                <rect x="140" y="20" width="200" height="110" opacity=".35"/>
+                            </g>
+                        </svg>
                     </div>
-                </div>
-                <div class="proof-point reveal">
-                    <span class="proof-label">Proof Point</span>
-                    <p>RBC's AI ambition ($700MM - $1BN by 2027) and CEO-sponsored AI Group model &mdash; public references available.</p>
-                </div>
+                    <div class="insight-body">
+                        <p class="kicker">Case Study 2 &middot; Executive narrative</p>
+                        <h3>Building an Enterprise Narrative Executives Can Repeat</h3>
+                        <span class="read-more">Read the case <span aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+                <a href="#case-3" class="insight reveal">
+                    <div class="insight-art art-3" aria-hidden="true">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M200 30 L330 190 L70 190 Z"/><path d="M200 80 L290 190 L110 190 Z" opacity=".6"/>
+                                <path d="M200 130 L250 190 L150 190 Z" opacity=".35"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="insight-body">
+                        <p class="kicker">Case Study 3 &middot; Governance</p>
+                        <h3>Board Governance &amp; Human Resources Committee</h3>
+                        <span class="read-more">Read the case <span aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+                <a href="#case-4" class="insight reveal">
+                    <div class="insight-art art-4" aria-hidden="true">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+                            <g fill="currentColor">
+                                <circle cx="80" cy="150" r="5"/><circle cx="130" cy="120" r="7"/><circle cx="180" cy="135" r="9"/>
+                                <circle cx="230" cy="95" r="11"/><circle cx="285" cy="75" r="13"/><circle cx="345" cy="45" r="16"/>
+                            </g>
+                            <path d="M80 150 L130 120 L180 135 L230 95 L285 75 L345 45" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+                        </svg>
+                    </div>
+                    <div class="insight-body">
+                        <p class="kicker">Case Study 4 &middot; People &amp; culture</p>
+                        <h3>Culture, Vision &amp; Workforce Readiness</h3>
+                        <span class="read-more">Read the case <span aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Three Pillars -->
-    <section class="section section-pillars" id="pillars">
+    <!-- Capabilities -->
+    <section class="section section-tint" id="capabilities">
         <div class="container">
-            <p class="section-label">What I'm Known For</p>
-            <h2 class="section-title">Three pillars that define my practice</h2>
-            <div class="pillars-grid">
-                <div class="pillar-card reveal">
-                    <span class="pillar-number">01</span>
+            <div class="section-head">
+                <p class="eyebrow">Capabilities</p>
+                <h2>Three pillars that define my practice</h2>
+                <p class="section-intro">What I'm known for, how I work, and what I bring on day one.</p>
+            </div>
+
+            <div class="pillars">
+                <article class="pillar reveal">
+                    <span class="num">01</span>
                     <h3>AI-to-Value Strategy</h3>
-                    <div class="pillar-divider"></div>
-                    <ul class="pillar-list">
+                    <ul>
                         <li>Use Cases</li>
                         <li>Prioritization</li>
                         <li>Delivery</li>
                         <li>Adoption</li>
                     </ul>
-                </div>
-                <div class="pillar-card pillar-card-featured reveal">
-                    <span class="pillar-number">02</span>
+                </article>
+                <article class="pillar reveal">
+                    <span class="num">02</span>
                     <h3>Board / Committee Narrative</h3>
-                    <div class="pillar-divider"></div>
-                    <ul class="pillar-list">
+                    <ul>
                         <li>Decisions</li>
                         <li>Oversight</li>
                         <li>Risk / Controls Language</li>
                     </ul>
-                </div>
-                <div class="pillar-card reveal">
-                    <span class="pillar-number">03</span>
+                </article>
+                <article class="pillar reveal">
+                    <span class="num">03</span>
                     <h3>Culture + Skills Enablement</h3>
-                    <div class="pillar-divider"></div>
-                    <ul class="pillar-list">
+                    <ul>
                         <li>Blueprints</li>
                         <li>Training</li>
                         <li>Readiness Measures</li>
                     </ul>
+                </article>
+            </div>
+
+            <div class="split">
+                <div class="split-head">
+                    <p class="eyebrow">How I work</p>
+                    <h3>From top-down targets to adoption</h3>
                 </div>
+                <div class="approach">
+                    <div class="approach-item reveal">
+                        <h4>Portfolio + Operating Model</h4>
+                        <p>Translate top-down targets into a structured portfolio and operating model</p>
+                    </div>
+                    <div class="approach-item reveal">
+                        <h4>Senior Narratives</h4>
+                        <p>Build executive narratives that stand up in governance and board settings</p>
+                    </div>
+                    <div class="approach-item reveal">
+                        <h4>Measurable Change Plans</h4>
+                        <p>Drive adoption through simple, measurable change and enablement plans</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split" id="toolkit">
+                <div class="split-head">
+                    <p class="eyebrow">My Toolkit</p>
+                    <h3>What I bring on day one</h3>
+                </div>
+                <ol class="toolkit">
+                    <li class="reveal">
+                        <span class="num">01</span>
+                        <div>
+                            <h4>Enterprise Value Tree + KPI Cascade</h4>
+                            <p>Top-down value decomposition linking strategy to measurable outcomes</p>
+                        </div>
+                    </li>
+                    <li class="reveal">
+                        <span class="num">02</span>
+                        <div>
+                            <h4>Portfolio Prioritization Matrix</h4>
+                            <p>Value, risk, feasibility, and time-to-impact scoring framework</p>
+                        </div>
+                    </li>
+                    <li class="reveal">
+                        <span class="num">03</span>
+                        <div>
+                            <h4>Executive Storyline (SCQA)</h4>
+                            <p>Situation-Complication-Question-Answer narrative structure</p>
+                        </div>
+                    </li>
+                    <li class="reveal">
+                        <span class="num">04</span>
+                        <div>
+                            <h4>Governance-Ready 1-Pagers</h4>
+                            <p>Formatted for committee review with clear asks and accountability</p>
+                        </div>
+                    </li>
+                    <li class="reveal">
+                        <span class="num">05</span>
+                        <div>
+                            <h4>Adoption Dashboard</h4>
+                            <p>Behavioural + operational KPIs tracking real usage and value capture</p>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies -->
-    <section class="section section-cases" id="case-studies">
+    <!-- Impact -->
+    <section class="section" id="impact">
         <div class="container">
-            <p class="section-label">Case Studies</p>
-            <h2 class="section-title">Proven impact at enterprise scale</h2>
+            <div class="section-head">
+                <p class="eyebrow">Impact</p>
+                <h2>Case studies</h2>
+                <p class="section-intro">Four examples of the work, each with public references.</p>
+            </div>
 
-            <!-- Case Study 1 -->
-            <div class="case-study reveal">
-                <div class="case-header">
-                    <span class="case-number">Case Study 1</span>
+            <!-- Case 1 -->
+            <article class="case" id="case-1">
+                <header class="case-head">
+                    <p class="kicker">Case Study 1</p>
                     <h3>Designing an AI-to-Value Engine That Scales</h3>
-                </div>
+                    <p class="case-lede"><span class="label">The Problem</span>AI ambition is easy; scaling adoption + value capture is hard.</p>
+                </header>
                 <div class="case-body">
-                    <div class="case-problem">
-                        <span class="case-label">The Problem</span>
-                        <p>AI ambition is easy; scaling adoption + value capture is hard.</p>
-                    </div>
-                    <div class="case-context">
-                        <span class="case-label">My Role</span>
-                        <p>Part of the core strategy team that helped define what RBC's publicly announced $700MM - $1BN AI value target looks like in practice. Contributed to shaping the strategy that led to the formation of a dedicated AI Group reporting directly to the CEO, supporting the transition of AI from experimentation to enterprise-scale execution across 100,000+ employees in 29 countries.</p>
-                    </div>
-                    <div class="case-metrics">
+                    <div class="metrics">
                         <div class="metric">
                             <span class="metric-value">$700MM - $1BN</span>
                             <span class="metric-label">Net new enterprise AI value target by 2027</span>
@@ -186,370 +301,293 @@
                             <span class="metric-label">Patent applications filed since 2019 (635 AI-related)</span>
                         </div>
                     </div>
-                    <div class="case-solution">
-                        <span class="case-label">Solution: AI Portfolio Operating System (AI-POS)</span>
-                        <div class="lanes">
-                            <div class="lane">
-                                <span class="lane-tag">Lane 1</span>
+                    <div class="case-block">
+                        <span class="label">My Role</span>
+                        <p>Part of the core strategy team that helped define what RBC's publicly announced $700MM - $1BN AI value target looks like in practice. Contributed to shaping the strategy that led to the formation of a dedicated AI Group reporting directly to the CEO, supporting the transition of AI from experimentation to enterprise-scale execution across 100,000+ employees in 29 countries.</p>
+                    </div>
+                    <div class="case-block">
+                        <span class="label">Solution: AI Portfolio Operating System (AI-POS)</span>
+                        <div class="cards-3">
+                            <div class="mini">
+                                <span class="mini-tag">Lane 1</span>
                                 <h4>Quick Wins</h4>
                                 <p>High-value, low-effort use cases deployed in 30-90 days</p>
                             </div>
-                            <div class="lane">
-                                <span class="lane-tag">Lane 2</span>
+                            <div class="mini">
+                                <span class="mini-tag">Lane 2</span>
                                 <h4>Platform Bets</h4>
                                 <p>Cross-functional capabilities that compound over 6-12 months</p>
                             </div>
-                            <div class="lane">
-                                <span class="lane-tag">Lane 3</span>
+                            <div class="mini">
+                                <span class="mini-tag">Lane 3</span>
                                 <h4>Frontier R&D</h4>
                                 <p>Exploratory AI capabilities with high strategic upside</p>
                             </div>
                         </div>
                     </div>
-                    <div class="case-programs">
-                        <span class="case-label">AI Programs Anchored To</span>
-                        <div class="program-tags">
-                            <span>Hyper-personalization</span>
-                            <span>Fraud detection & prevention</span>
-                            <span>Productivity & automation</span>
-                            <span>Training & workforce enablement</span>
-                        </div>
+                    <div class="case-block">
+                        <span class="label">AI Programs Anchored To</span>
+                        <ul class="chips">
+                            <li>Hyper-personalization</li>
+                            <li>Fraud detection & prevention</li>
+                            <li>Productivity & automation</li>
+                            <li>Training & workforce enablement</li>
+                        </ul>
                     </div>
-                    <div class="case-references">
-                        <span class="case-label">Public References</span>
-                        <div class="ref-links">
-                            <a href="https://cfotech.ca/story/rbc-forms-new-ai-unit-targeting-cad-1-billion-by-2027" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">RBC forms new AI unit targeting CAD $1 billion by 2027</span>
-                                <span class="ref-link-source">CFOtech</span>
-                            </a>
-                            <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025q4strategicupdate.pdf" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">Q4 2025 Strategic Update: Investor Day</span>
-                                <span class="ref-link-source">RBC Investor Relations</span>
-                            </a>
-                        </div>
+                    <div class="case-block refs">
+                        <span class="label">Public References</span>
+                        <a href="https://cfotech.ca/story/rbc-forms-new-ai-unit-targeting-cad-1-billion-by-2027" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">RBC forms new AI unit targeting CAD $1 billion by 2027</span>
+                            <span class="ref-source">CFOtech <span aria-hidden="true">&nearr;</span></span>
+                        </a>
+                        <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025q4strategicupdate.pdf" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">Q4 2025 Strategic Update: Investor Day</span>
+                            <span class="ref-source">RBC Investor Relations <span aria-hidden="true">&nearr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Case Study 2 -->
-            <div class="case-study reveal">
-                <div class="case-header">
-                    <span class="case-number">Case Study 2</span>
+            <!-- Case 2 -->
+            <article class="case" id="case-2">
+                <header class="case-head">
+                    <p class="kicker">Case Study 2</p>
                     <h3>Building an Enterprise Narrative Executives Can Repeat</h3>
-                </div>
+                    <p class="case-lede"><span class="label">The Framework</span>Strategy = 5-7 enterprise priorities with clear outcomes. Each priority maps to a measurable KPI, 3 linked initiatives, and clear ownership + timeline.</p>
+                </header>
                 <div class="case-body">
-                    <div class="case-problem">
-                        <span class="case-label">The Framework</span>
-                        <p>Strategy = 5-7 enterprise priorities with clear outcomes. Each priority maps to a measurable KPI, 3 linked initiatives, and clear ownership + timeline.</p>
-                    </div>
-                    <div class="case-context">
-                        <span class="case-label">My Role</span>
+                    <div class="case-block">
+                        <span class="label">My Role</span>
                         <p>Built the executive narratives and board-ready materials that translate enterprise strategy into repeatable storylines for the CIO, CHRO, and senior leadership. Shaped the content and framing used in strategy updates, investor communications, and governance forums.</p>
                     </div>
-                    <div class="case-deliverables">
-                        <span class="case-label">Board-Ready Deliverables</span>
-                        <div class="deliverables-grid">
-                            <div class="deliverable">
+                    <div class="case-block">
+                        <span class="label">Board-Ready Deliverables</span>
+                        <div class="cards-3">
+                            <div class="mini">
                                 <h4>1-Page Executive Brief</h4>
                                 <p>Goal, what changes, KPIs, decisions needed. Readable in 2 minutes.</p>
                             </div>
-                            <div class="deliverable">
+                            <div class="mini">
                                 <h4>"So What" Storyline Slides</h4>
                                 <p>One message per slide. What happened? Why does it matter? What do we do next?</p>
                             </div>
-                            <div class="deliverable">
+                            <div class="mini">
                                 <h4>Decision Log + Trade-Off Framing</h4>
                                 <p>Structured record of what was decided, traded off, and why.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="case-references">
-                        <span class="case-label">Public Reference</span>
-                        <div class="ref-links">
-                            <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025q4strategicupdate.pdf" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">Enterprise priorities and AI value framing in RBC Strategic Update</span>
-                                <span class="ref-link-source">RBC Investor Relations</span>
-                            </a>
-                        </div>
+                    <div class="case-block refs">
+                        <span class="label">Public Reference</span>
+                        <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025q4strategicupdate.pdf" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">Enterprise priorities and AI value framing in RBC Strategic Update</span>
+                            <span class="ref-source">RBC Investor Relations <span aria-hidden="true">&nearr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Case Study 3 -->
-            <div class="case-study reveal">
-                <div class="case-header">
-                    <span class="case-number">Case Study 3</span>
+            <!-- Case 3 -->
+            <article class="case" id="case-3">
+                <header class="case-head">
+                    <p class="kicker">Case Study 3</p>
                     <h3>Board Governance &amp; Human Resources Committee</h3>
-                </div>
+                    <p class="case-lede"><span class="label">The Focus</span>High-profile board administration and governance work, ensuring leadership materials, committee processes, and reporting flows operate at the standard required for board-level oversight.</p>
+                </header>
                 <div class="case-body">
-                    <div class="case-problem">
-                        <span class="case-label">The Focus</span>
-                        <p>High-profile board administration and governance work, ensuring leadership materials, committee processes, and reporting flows operate at the standard required for board-level oversight.</p>
-                    </div>
-                    <div class="case-context">
-                        <span class="case-label">My Role</span>
+                    <div class="case-block">
+                        <span class="label">My Role</span>
                         <p>Closely involved in the governance operations for RBC's Human Resources Committee (HRC) and broader board administration. Coordinating materials with senior leaders, ensuring everything flows on schedule, and supporting the end-to-end process for committee reporting to the board. This includes oversight areas like compensation risk, cross-committee coordination (e.g., HRC + Risk Committee), and alignment with the Audit and Governance committees.</p>
                     </div>
-                    <div class="governance-grid">
-                        <div class="governance-item">
-                            <h4>Committee Material Coordination</h4>
-                            <p>Coordinating and preparing materials for HRC review with senior leaders across multiple stakeholder groups</p>
-                        </div>
-                        <div class="governance-item">
-                            <h4>Board Reporting Flow</h4>
-                            <p>Ensuring committee reporting is structured to flow directly to board with consistent framing and escalation pathways</p>
-                        </div>
-                        <div class="governance-item">
-                            <h4>Cross-Committee Coordination</h4>
-                            <p>Supporting joint discussions across HRC, Risk, Audit, and Governance committees with aligned scope and accountability</p>
+                    <div class="case-block">
+                        <span class="label">What it covers</span>
+                        <div class="cards-3">
+                            <div class="mini">
+                                <h4>Committee Material Coordination</h4>
+                                <p>Coordinating and preparing materials for HRC review with senior leaders across multiple stakeholder groups</p>
+                            </div>
+                            <div class="mini">
+                                <h4>Board Reporting Flow</h4>
+                                <p>Ensuring committee reporting is structured to flow directly to board with consistent framing and escalation pathways</p>
+                            </div>
+                            <div class="mini">
+                                <h4>Cross-Committee Coordination</h4>
+                                <p>Supporting joint discussions across HRC, Risk, Audit, and Governance committees with aligned scope and accountability</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="case-references">
-                        <span class="case-label">Public References</span>
-                        <div class="ref-links">
-                            <a href="https://www.rbc.com/our-company/governance/index.html" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">Corporate Governance</span>
-                                <span class="ref-link-source">RBC</span>
-                            </a>
-                            <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025englishproxy.pdf" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">Management Proxy Circular 2025 (HRC on Page 48)</span>
-                                <span class="ref-link-source">RBC Investor Relations</span>
-                            </a>
-                        </div>
+                    <div class="case-block refs">
+                        <span class="label">Public References</span>
+                        <a href="https://www.rbc.com/our-company/governance/index.html" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">Corporate Governance</span>
+                            <span class="ref-source">RBC <span aria-hidden="true">&nearr;</span></span>
+                        </a>
+                        <a href="https://www.rbc.com/investor-relations/_assets-custom/pdf/2025englishproxy.pdf" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">Management Proxy Circular 2025 (HRC on Page 48)</span>
+                            <span class="ref-source">RBC Investor Relations <span aria-hidden="true">&nearr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Case Study 4 -->
-            <div class="case-study reveal">
-                <div class="case-header">
-                    <span class="case-number">Case Study 4</span>
+            <!-- Case 4 -->
+            <article class="case" id="case-4">
+                <header class="case-head">
+                    <p class="kicker">Case Study 4</p>
                     <h3>Culture, Vision &amp; Workforce Readiness</h3>
-                </div>
+                    <p class="case-lede"><span class="label">The Insight</span>Strategy initiatives fail when skills + enablement lag behind ambition.</p>
+                </header>
                 <div class="case-body">
-                    <div class="case-problem">
-                        <span class="case-label">The Insight</span>
-                        <p>Strategy initiatives fail when skills + enablement lag behind ambition.</p>
-                    </div>
-                    <div class="case-context">
-                        <span class="case-label">My Role</span>
+                    <div class="case-block">
+                        <span class="label">My Role</span>
                         <p>Member of the core culture working group shaping RBC's vision, values, and workforce readiness strategy. Contributed to the blueprints that guide how 100,000+ employees develop skills, adopt new ways of working, and connect to the enterprise's strategic direction. This work underpins the public-facing commitments around skills development and inclusive opportunity.</p>
                     </div>
-                    <div class="scorecard">
-                        <span class="case-label">Readiness Scorecard</span>
-                        <div class="scorecard-grid">
-                            <div class="scorecard-item">
-                                <div class="scorecard-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                                </div>
+                    <div class="case-block">
+                        <span class="label">Readiness Scorecard</span>
+                        <div class="cards-3">
+                            <div class="mini">
                                 <h4>Training Completion</h4>
                                 <p>5,584 employees upskilled through programs like Leap; 3M+ collective learning hours</p>
                             </div>
-                            <div class="scorecard-item">
-                                <div class="scorecard-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-                                </div>
+                            <div class="mini">
                                 <h4>Internal Mobility</h4>
                                 <p>72% of positions filled by internal candidates in 2024</p>
                             </div>
-                            <div class="scorecard-item">
-                                <div class="scorecard-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-6"/><circle cx="12" cy="6" r="2"/></svg>
-                                </div>
+                            <div class="mini">
                                 <h4>Capability Lift</h4>
                                 <p>Pre/post skill assessments + manager ratings across AI tool adoption</p>
                             </div>
                         </div>
                     </div>
-                    <div class="case-references">
-                        <span class="case-label">Public Reference</span>
-                        <div class="ref-links">
-                            <a href="https://www.rbc.com/our-impact/" target="_blank" rel="noopener" class="ref-link-card">
-                                <span class="ref-link-title">Our Impact</span>
-                                <span class="ref-link-source">RBC</span>
-                            </a>
-                        </div>
+                    <div class="case-block refs">
+                        <span class="label">Public Reference</span>
+                        <a href="https://www.rbc.com/our-impact/" target="_blank" rel="noopener" class="ref">
+                            <span class="ref-title">Our Impact</span>
+                            <span class="ref-source">RBC <span aria-hidden="true">&nearr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section section-experience" id="experience">
-        <div class="container">
-            <p class="section-label">Experience Highlights</p>
-            <h2 class="section-title">Multi-disciplinary track record</h2>
-            <div class="experience-grid">
-                <div class="exp-card reveal">
-                    <div class="exp-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    </div>
-                    <h3>Corporate Strategy</h3>
-                    <p>Board strategy development for the Group Executive (CIO, CHRO & CMO). Strategy workshops, SLT forums & OC offsites.</p>
-                </div>
-                <div class="exp-card reveal">
-                    <div class="exp-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                    </div>
-                    <h3>Research & Innovation</h3>
-                    <p>10+ thought leadership publications on tech and banking trends. Competitive intel analysis, external benchmarking & innovation roadshows.</p>
-                </div>
-                <div class="exp-card reveal">
-                    <div class="exp-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Chief of Staff</h3>
-                    <p>Supporting SVPs in defining key goals, priorities and integrated roadmaps. Town halls and comms events for ~600 employees.</p>
-                </div>
-                <div class="exp-card reveal">
-                    <div class="exp-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <h3>Awards</h3>
-                    <p>RBC Conference / Cruise Award (top &lt;1% of 98k+ employees globally). Digital Quarterly Performance Award (top 5%).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Toolkit -->
-    <section class="section section-toolkit" id="toolkit">
-        <div class="container">
-            <p class="section-label">My Toolkit</p>
-            <h2 class="section-title">What I bring on day one</h2>
-            <div class="toolkit-grid">
-                <div class="tool-card reveal">
-                    <div class="tool-number">01</div>
-                    <h4>Enterprise Value Tree + KPI Cascade</h4>
-                    <p>Top-down value decomposition linking strategy to measurable outcomes</p>
-                </div>
-                <div class="tool-card reveal">
-                    <div class="tool-number">02</div>
-                    <h4>Portfolio Prioritization Matrix</h4>
-                    <p>Value, risk, feasibility, and time-to-impact scoring framework</p>
-                </div>
-                <div class="tool-card reveal">
-                    <div class="tool-number">03</div>
-                    <h4>Executive Storyline (SCQA)</h4>
-                    <p>Situation-Complication-Question-Answer narrative structure</p>
-                </div>
-                <div class="tool-card reveal">
-                    <div class="tool-number">04</div>
-                    <h4>Governance-Ready 1-Pagers</h4>
-                    <p>Formatted for committee review with clear asks and accountability</p>
-                </div>
-                <div class="tool-card reveal">
-                    <div class="tool-number">05</div>
-                    <h4>Adoption Dashboard</h4>
-                    <p>Behavioural + operational KPIs tracking real usage and value capture</p>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- 90-Day Plan -->
-    <section class="section section-impact" id="impact">
+    <section class="section section-dark" id="plan">
         <div class="container">
-            <p class="section-label">90-Day Impact Plan</p>
-            <h2 class="section-title">How I'd help you in 90 days</h2>
-            <div class="timeline">
-                <div class="timeline-phase reveal">
-                    <div class="phase-header">
-                        <span class="phase-days">Days 1-30</span>
-                        <h3>Diagnose & Align</h3>
-                    </div>
+            <div class="section-head">
+                <p class="eyebrow eyebrow-light">90-Day Impact Plan</p>
+                <h2>How I'd help you in 90 days</h2>
+            </div>
+            <ol class="plan">
+                <li class="reveal">
+                    <span class="plan-days">Days 1-30</span>
+                    <h3>Diagnose & Align</h3>
                     <ul>
                         <li>Stakeholder interviews + landscape scan</li>
                         <li>Align on 3 priority outcomes</li>
                         <li>Identify quick wins + blockers</li>
                     </ul>
-                    <div class="phase-bar" style="--phase-width: 33%"></div>
-                </div>
-                <div class="timeline-phase reveal">
-                    <div class="phase-header">
-                        <span class="phase-days">Days 31-60</span>
-                        <h3>Build & Structure</h3>
-                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="plan-days">Days 31-60</span>
+                    <h3>Build & Structure</h3>
                     <ul>
                         <li>Portfolio map + execution plan</li>
                         <li>Executive narrative drafts</li>
                         <li>Governance alignment</li>
                     </ul>
-                    <div class="phase-bar" style="--phase-width: 66%"></div>
-                </div>
-                <div class="timeline-phase reveal">
-                    <div class="phase-header">
-                        <span class="phase-days">Days 61-90</span>
-                        <h3>Launch & Measure</h3>
-                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="plan-days">Days 61-90</span>
+                    <h3>Launch & Measure</h3>
                     <ul>
                         <li>Pilot launches + adoption KPIs</li>
                         <li>Exec comms cadence established</li>
                         <li>Readiness scorecard live</li>
                     </ul>
-                    <div class="phase-bar" style="--phase-width: 100%"></div>
-                </div>
-            </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- Built With -->
-    <section class="section section-built" id="built-with">
+    <!-- About -->
+    <section class="section" id="about">
         <div class="container">
-            <div class="built-content reveal">
-                <p class="section-label">Built With</p>
-                <h2 class="section-title">This portfolio was built using Claude Code</h2>
-                <p class="built-description">From concept to deployment, this site was created entirely through conversational AI-assisted development using <strong>Claude Code</strong>, pushed to <strong>GitHub</strong>, and deployed via <strong>GitHub Pages</strong>.</p>
-                <div class="built-stack">
-                    <div class="stack-item">
-                        <span class="stack-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        </span>
-                        <span>HTML / CSS / JS</span>
+            <div class="section-head">
+                <p class="eyebrow">About</p>
+                <h2>Multi-disciplinary track record</h2>
+            </div>
+            <div class="about">
+                <aside class="about-card">
+                    <img src="photo.jpg" alt="" width="600" height="600" loading="lazy">
+                    <p class="about-name">Pulkit Garg</p>
+                    <p class="about-role">Senior Manager, Strategy & Enablement</p>
+                    <div class="proof">
+                        <span class="label">Proof Point</span>
+                        <p>RBC's AI ambition ($700MM - $1BN by 2027) and CEO-sponsored AI Group model &mdash; public references available.</p>
                     </div>
-                    <div class="stack-item">
-                        <span class="stack-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                        </span>
-                        <span>GitHub</span>
+                </aside>
+                <div class="experience">
+                    <div class="exp reveal">
+                        <h3>Corporate Strategy</h3>
+                        <p>Board strategy development for the Group Executive (CIO, CHRO & CMO). Strategy workshops, SLT forums & OC offsites.</p>
                     </div>
-                    <div class="stack-item">
-                        <span class="stack-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                        </span>
-                        <span>Claude Code</span>
+                    <div class="exp reveal">
+                        <h3>Research & Innovation</h3>
+                        <p>10+ thought leadership publications on tech and banking trends. Competitive intel analysis, external benchmarking & innovation roadshows.</p>
+                    </div>
+                    <div class="exp reveal">
+                        <h3>Chief of Staff</h3>
+                        <p>Supporting SVPs in defining key goals, priorities and integrated roadmaps. Town halls and comms events for ~600 employees.</p>
+                    </div>
+                    <div class="exp reveal">
+                        <h3>Awards</h3>
+                        <p>RBC Conference / Cruise Award (top &lt;1% of 98k+ employees globally). Digital Quarterly Performance Award (top 5%).</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="built">
+                <p class="eyebrow">Built With</p>
+                <h3>This portfolio was built using Claude Code</h3>
+                <p>From concept to deployment, this site was created entirely through conversational AI-assisted development using <strong>Claude Code</strong>, pushed to <strong>GitHub</strong>, and deployed via <strong>GitHub Pages</strong>.</p>
+                <ul class="chips">
+                    <li>HTML / CSS / JS</li>
+                    <li>GitHub</li>
+                    <li>Claude Code</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Connect -->
-    <section class="section section-connect" id="connect">
-        <div class="container">
-            <div class="connect-content">
-                <p class="section-label">Let's Connect</p>
-                <h2 class="connect-title">Pulkit Garg</h2>
+    <section class="connect" id="connect">
+        <div class="container connect-inner">
+            <div>
+                <p class="eyebrow eyebrow-light">Let's Connect</p>
+                <h2>Pulkit Garg</h2>
                 <p class="connect-role">Strategy & Transformation</p>
-                <div class="connect-links">
-                    <a href="https://www.linkedin.com/in/pulkitgargbrock/" target="_blank" rel="noopener" class="connect-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/pg19-stack" target="_blank" rel="noopener" class="connect-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        <span>GitHub</span>
-                    </a>
-                </div>
+            </div>
+            <div class="connect-links">
+                <a href="https://www.linkedin.com/in/pulkitgargbrock/" target="_blank" rel="noopener" class="btn btn-light">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/pg19-stack" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Pulkit Garg. Built with Claude Code.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Pulkit Garg. Built with Claude Code.</p>
+            <p><a href="v1/">View the previous version</a></p>
         </div>
     </footer>
 
