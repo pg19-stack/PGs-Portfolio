@@ -19,7 +19,7 @@ Pulkit Garg's own.
 
 | # | Check | Result |
 |---|-------|--------|
-| 1 | Original site still available in `v1/` | Pass |
+| 1 | Original site removed from the live site at the owner's request (it remains in the project history) | Done |
 | 2 | All earlier case study text and all eight external links carried over | Pass |
 | 3 | Every in-page link points to a section that exists | Pass |
 | 4 | All photos load; no browser errors | Pass |
