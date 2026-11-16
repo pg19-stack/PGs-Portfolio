@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Use-Case Prioritizer | Pulkit Garg</title>
+    <meta name="description" content="Score AI ideas on value, feasibility, risk and time to impact, and sort them into Quick Wins, Platform Bets and Frontier R&D.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prioritizer.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23061a33'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='white' text-anchor='middle'>PG</text></svg>">
+</head>
+<body class="tool-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header solid tool-header">
+        <div class="container header-inner">
+            <a href="index.html" class="wordmark" aria-label="Pulkit Garg, home">
+                <span>Pulkit</span>
+                <span>Garg</span>
+            </a>
+            <a href="index.html#capabilities" class="back-link"><span aria-hidden="true">&larr;</span> Back to portfolio</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="tool-intro">
+            <div class="container">
+                <p class="eyebrow">Interactive tool</p>
+                <h1>AI Use-Case Prioritizer</h1>
+                <p class="section-intro">List your AI ideas, score each one, and see where it lands. This is the prioritization matrix I use to sort an AI portfolio into three lanes: Quick Wins, Platform Bets and Frontier R&D.</p>
+            </div>
+        </section>
+
+        <section class="tool-body">
+            <div class="container tool-grid">
+
+                <div class="panel" aria-labelledby="ideas-title">
+                    <div class="panel-head">
+                        <h2 id="ideas-title">Your ideas</h2>
+                        <p class="panel-note" id="example-note">Example ideas with illustrative scores. Replace them with your own.</p>
+                    </div>
+                    <div id="ideas" class="ideas"></div>
+                    <div class="panel-actions">
+                        <button type="button" class="tbtn tbtn-primary" id="add-idea">+ Add an idea</button>
+                        <button type="button" class="tbtn" id="reset-ideas">Reset to examples</button>
+                        <button type="button" class="tbtn" id="clear-ideas">Clear all</button>
+                    </div>
+                    <p class="panel-note" id="limit-note" hidden>You have reached the limit of 12 ideas.</p>
+                </div>
+
+                <div class="panel" aria-labelledby="map-title">
+                    <div class="panel-head">
+                        <h2 id="map-title">Where each idea lands</h2>
+                        <p class="panel-note">Each numbered dot is one of your ideas. Higher is more valuable, further right is easier to deliver. Hover or tap a dot for detail.</p>
+                    </div>
+                    <ul class="legend" aria-label="Lanes">
+                        <li><span class="swatch lane-quick"></span>Quick Wins</li>
+                        <li><span class="swatch lane-platform"></span>Platform Bets</li>
+                        <li><span class="swatch lane-frontier"></span>Frontier R&D</li>
+                        <li><span class="swatch lane-revisit"></span>Revisit later</li>
+                    </ul>
+                    <div class="chart-wrap">
+                        <svg id="chart" viewBox="0 0 560 420" role="img" aria-labelledby="map-title"></svg>
+                        <div id="tip" class="tip" hidden></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="lanes-head">
+                    <h2>Your portfolio, by lane</h2>
+                    <p class="panel-note">Ranked by priority score out of 100 within each lane.</p>
+                </div>
+                <div class="lanes" id="lanes">
+                    <div class="lane-col" data-lane="quick">
+                        <p class="lane-title"><span class="swatch lane-quick"></span>Quick Wins</p>
+                        <p class="lane-desc">High-value, low-effort use cases deployed in 30-90 days</p>
+                        <ol class="lane-list"></ol>
+                    </div>
+                    <div class="lane-col" data-lane="platform">
+                        <p class="lane-title"><span class="swatch lane-platform"></span>Platform Bets</p>
+                        <p class="lane-desc">Cross-functional capabilities that compound over 6-12 months</p>
+                        <ol class="lane-list"></ol>
+                    </div>
+                    <div class="lane-col" data-lane="frontier">
+                        <p class="lane-title"><span class="swatch lane-frontier"></span>Frontier R&D</p>
+                        <p class="lane-desc">Exploratory AI capabilities with high strategic upside</p>
+                        <ol class="lane-list"></ol>
+                    </div>
+                    <div class="lane-col" data-lane="revisit">
+                        <p class="lane-title"><span class="swatch lane-revisit"></span>Revisit later</p>
+                        <p class="lane-desc">Not yet worth a place in the portfolio</p>
+                        <ol class="lane-list"></ol>
+                    </div>
+                </div>
+
+                <details class="how">
+                    <summary>How the scoring works</summary>
+                    <div class="how-body">
+                        <div>
+                            <h3>Priority score</h3>
+                            <p>Each idea gets a score out of 100, built from four inputs:</p>
+                            <ul>
+                                <li><strong>Value</strong> counts for 40%</li>
+                                <li><strong>Feasibility</strong> counts for 25%</li>
+                                <li><strong>Time to impact</strong> counts for 20% (faster scores higher)</li>
+                                <li><strong>Risk</strong> counts for 15% (lower risk scores higher)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Lane rules</h3>
+                            <ul>
+                                <li><strong>Quick Win:</strong> live within 3 months, feasibility of 4 or more, value of 3 or more</li>
+                                <li><strong>Platform Bet:</strong> value of 4 or more, feasibility of 3 or more, live within 12 months</li>
+                                <li><strong>Frontier R&D:</strong> value of 4 or more, but hard to deliver or more than a year out</li>
+                                <li><strong>Revisit later:</strong> everything else</li>
+                            </ul>
+                        </div>
+                        <p class="panel-note">The weights are a starting point. In a real portfolio they are agreed with the sponsor before any idea is scored. Your entries stay in this browser and are not sent anywhere.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Pulkit Garg</p>
+            <p><a href="index.html">Back to portfolio</a></p>
+        </div>
+    </footer>
+
+    <script src="prioritizer.js"></script>
+</body>
+</html>
